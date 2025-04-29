@@ -10,11 +10,11 @@ public class CheckDigit
      /* to be implemented in part (a) */
      int sum = 0;
      int changeNum = num;
-     for (int i = 0; i < getNumberofDigits(num); i++){
+     for (int i = 0; i < getNumberOfDigits(num); i++){
         sum+= (changeNum % 10) * (7-i);
          changeNum = changeNum / 10;
      }
-     return getDigit(sum, getNumberofDigits(sum));
+     return getDigit(sum, getNumberOfDigits(sum));
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
@@ -26,7 +26,7 @@ public class CheckDigit
    public static boolean isValid(int numWithCheckDigit)    
    {      
      /* to be implemented in part (b) */    
-     if (getCheck(numWithCheckDigit/10) == numwithCheckDigit%10){
+     if (getCheck(numWithCheckDigit/10) == numWithCheckDigit%10){
       return true;
      }
      return false;
